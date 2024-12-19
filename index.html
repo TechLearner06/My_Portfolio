@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial scale=1.0">
+        <title>Personal Portfolio website</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="header-section">
+                    <div class="text">
+                        <h1>Fayiza K M</h1>
+                        <p>Aspiring Developer | MCA Graduate</p>
+                    </div>
+                    <nav>    
+                        <ul id="sidemenu">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="resume/FAYIZA KM.pdf">Get CV</a></li>
+                            <i class="fa fa-times" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fa fa-bars" onclick="openmenu()"></i>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+       
+        <!------------about---------->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="images/bg_about.jpg">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello there!.I'm Fayiza K M, MCA Graduate.My journey through the world of science has been exciting, but I've discovered a passion for coding that has taken my career aspirations in a whole new direction.My goal? To become a full-stack developer and immerse myself in the dynamic world of web development. I've been honing my skills in backend development to create robust and efficient web applications.I am enthusiastic about applying my knowledge to real-world challenges and further expanding my expertise.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
+                            <p class="tab-links" onclick="opentab('education',event)">Education</p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span >Front-End Development</span><br>Designing Website interfaces <br>using HTML,CSS,JavaScript</li>
+                                <li><span >Back-End Development</span><br>Python-Django,PHP,MySQL</li>
+                            </ul>
+                        </div>
+                        
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Master of Computer Application</span><br>2021-2023<br>from MG University</li>
+                                <li><span>BSc Physics with Computer Application<br></span>2018-2021<br> from MG University</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+
+        <!--portfolio-->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Works</h1>
+                <div class="works">
+                    <div class="layer">
+                        <h4>clipNote - Full Stack Notes App<a href="https://github.com/TechLearner06"><i style="color: white; margin-left: 10px;"class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                    </div>
+                    <div class="work-list">
+                        <div class="work">
+                            <a href="./images/work_3/Screenshot 2024-12-15 123612.png"><img src="./images/work_3/Screenshot 2024-12-15 123612.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_3/Screenshot 2024-12-15 123707.png"><img src="./images/work_3/Screenshot 2024-12-15 123707.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_3/Screenshot 2024-12-15 123803.png"><img src="./images/work_3/Screenshot 2024-12-15 123803.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_3/Screenshot 2024-12-15 123850.png"><img src="./images/work_3/Screenshot 2024-12-15 123850.png" alt="" class="work-img"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="works">
+                    <div class="layer">
+                        <h4>Feeds - Social Media Web Application<a href="https://github.com/TechLearner06"><i style="color: white; margin-left: 10px;"class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                    </div>
+                    <div class="work-list">
+                        <div class="work">
+                            <a href="./images/work_2/feeds1.png"><img src="./images/work_2/feeds1.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_2/feeds2.png"><img src="./images/work_2/feeds2.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_2/feeds3.png"><img src="./images/work_2/feeds3.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_2/feeds4.png"><img src=".//images/work_2/feeds4.png" alt="" class="work-img"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="works">
+                    <div class="layer">
+                        <h4>Online Food order Website<a href="https://github.com/TechLearner06"><i style="color: white; margin-left: 10px;"class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                    </div>
+                    <div class="work-list">
+                        <div class="work">
+                            <a href="./images/work_1/img2.png"><img src="./images/work_1/img2.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_1/img3.png"><img src="./images/work_1/img3.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_1/img4.png"><img src="./images/work_1/img4.png" alt="" class="work-img"></a>
+                        </div>
+                        <div class="work">
+                            <a href="./images/work_1/img5.png"><img src=".//images/work_1/img5.png" alt="" class="work-img"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--<a href="#" class="btn">See More</a> -->
+            </div>
+        </div>
+
+
+        <hr>
+
+        <!--Contact-->
+
+        <div id="contact">
+            <div class="container">
+                <h1 class="sub-title">Let's Connect</h1>
+                <div class="row">
+                    <div class="contact-section">
+                        <div class="note">
+                            <p>Thank you for visiting my portfolio! I am actively seeking job opportunities where I can contribute and grow. Let's connect</p>
+                        </div>
+                        <div class="contact-det">
+                            <p><i class="fa fa-envelope"></i>fayizakm2001@gmail.com</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Kochi</p>
+                            <a href="https://github.com/TechLearner06" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/fayizakm/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <button id="backToTopBtn" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+
+        <div class="footer">
+            
+        </div>
+    
+    <script src=index.js></script>
+
+    
+    </body>
+</html>
