@@ -209,7 +209,7 @@ main{
     font-style: italic;
 }
 
-@media (max-width:767px) {
+@media (max-width:991px) {
     .home-section{
         padding-bottom:70px;
     }
@@ -245,7 +245,7 @@ main{
     width:450px;
 }
 
-@media (max-width:767px) {
+@media (max-width:991px) {
     .home-image img{
         height: 350px;
         width:350px;
@@ -394,7 +394,7 @@ main{
     grid-template-columns: repeat(4,minmax(300px,1fr));
 }
 
-@media (max-width: 768px) {
+@media (max-width:991px) {
     .skills-list{
       grid-template-columns: repeat(2, minmax(150px,1fr)); 
     }
@@ -559,7 +559,6 @@ main{
     font-style: normal; /* Ensure location text isn't italic if note is */
   }
   
-  /* Media query for responsiveness */
   
     .contact-det {
       flex-direction: row; /* Display items in a row on larger screens */
