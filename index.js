@@ -1,39 +1,36 @@
-var tablinks=document.getElementsByClassName("tab-links");
-var tabcontents=document.getElementsByClassName("tab-contents");
+document.addEventListener("DOMContentLoaded", function() {
+    var backToTopBtn = document.getElementById("backToTopBtn");
 
-function opentab(tabname,event){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
+    function isAtBottom() {
+        // Calculate the document's height
+        const documentHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+
+        // Calculate the current scroll position and viewport height
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+        // Check if the user is near the bottom
+        return (documentHeight - windowHeight - scrollPosition) <= 20; // Adjust the threshold as needed
     }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add('active-tab');
-}
 
-
-
-var sidemenu=document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right="0";
-        }
-
-        function closemenu(){
-            sidemenu.style.right="-200px";
-        }
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-    window.onscroll = function() {
-        var backToTopBtn = document.getElementById("backToTopBtn");
-        
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    function toggleBackToTopButton() {
+        if (isAtBottom()) {
             backToTopBtn.style.display = "block";
         } else {
             backToTopBtn.style.display = "none";
         }
+    }
+
+    // Initialize on load
+    toggleBackToTopButton();
+
+    // Update on scroll
+    window.onscroll = function() {
+        toggleBackToTopButton();
     };
 
     function scrollToTop() {
@@ -41,8 +38,6 @@ var sidemenu=document.getElementById("sidemenu");
         document.documentElement.scrollTop = 0;
     }
 
-    // Attach the scrollToTop function to the button click event
     var backToTopButton = document.getElementById("backToTopBtn");
     backToTopButton.addEventListener("click", scrollToTop);
-
-    });
+});
